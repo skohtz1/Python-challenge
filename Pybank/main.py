@@ -77,7 +77,8 @@ for j in range(len(revenue2)):
 
 totalavgchge = round((sum(differences1)+sum(differences2))/(len(differences1)+len(differences2)),2)
 
-    
+
+##print out the results    
 print("Financial Analysis")  
 print("----------------------")
 print("Total Months (in both data sets): " +str(totalmonth))
@@ -93,3 +94,23 @@ if min(min1,min2)==min1:
     print("Greatest Decrease in Revenue: " + datemin1 + " $" +str(min1))
 elif min(min1,min2)==min2:
     print("Greatest Decrease in Revenue: " +datemin2 + " $" +str(min2))
+
+##write results to file
+    
+output_path = os.path.join('Results','output.txt')
+
+with open(output_path,'w') as txtfile:
+    txtfile.write("Financial Analysis\n")
+    txtfile.write("------------------\n")
+    txtfile.write("Total Months (in both data sets): " +str(totalmonth)+"\n")
+    txtfile.write("Average Revenue: $"+str(totalavg)+"\n")
+    txtfile.write("Average Revenue Change: $"+str(totalavgchge) +"\n")
+    if max(max1,max2)==max1:
+        txtfile.write("Greatest Increase in Revenue: " + datemax1 + " $" + str(max1) +"\n")
+    elif max(max1,max2)==max2:
+        txtfile.write("Greatest Increase in Revenue: "+datemax2 + " $" +str(max2) + "\n")
+    if min(min1,min2)==min1:
+        txtfile.write("Greatest Decrease in Revenue: " + datemin1 + " $" +str(min1) + "\n")
+    elif min(min1,min2)==min2:
+        txtfile.write("Greatest Decrease in Revenue: " +datemin2 + " $" +str(min2) + "\n")
+    
