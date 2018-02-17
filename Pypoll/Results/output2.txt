@@ -1,0 +1,10 @@
+Election Results: 
+------------------
+Total Votes: 803000
+------------------
+Vestal: 48.0% total: 385440
+Seth: 5.0% total: 40150
+Torres: 44.0% total: 353320
+Cordin: 3.0% total: 24090
+------------------
+The Winner is: Vestal
